@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="1" name="vates">
+  <listeners>
+    <listener class-name="vates.config.report.TestListener"/>
+    <listener class-name="vates.config.report.ExtentReportListener"/>
+  </listeners>
+
+  <test allow-return-values="true" name="Test">
+
+    <groups>
+      <run>
+        <include name="LOGIN"/>
+      </run>
+    </groups>
+    <packages>
+      <package name="vates.testCases.*"></package>
+    </packages>
+  </test>
+</suite>
